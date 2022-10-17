@@ -7,9 +7,9 @@ o programa foi organizado juntamente com os testes para tentar ser mais uma ferr
 
 ## Estrutura de dados usadas :books::
 
-Levando em consideração o objetivo de fazer um algoritmo o mais fiel possivel aos desenhados em sala, foram utlizadas duas estruturas de dados comumente conhecidas, sendo elas o Grafo e o HashMap. 
+Levando em consideração o objetivo de fazer um algoritmo o mais fiel possivel aos desenhados em sala, foram utlizadas duas estruturas de dados comumente conhecidas, sendo elas o Grafo e a tabela Hash. 
 
-Sendo mais específico para o Grafo, usamos a representação dele como uma lista de Adjacências, onde para sua implementação foi utilizado o Dicionário do Python onde podemos comparar seu funciomamento ao HashMap, assim a representação do dado é feita usando *<Chave,Valor>*, dessa forma representando os possíveis estados do AFD.Abaixo podemos observar uma exemplo: 
+Sendo mais específico para o Grafo, usamos a representação dele como uma lista de Adjacências, onde para sua implementação foi utilizado o Dicionário do Python onde podemos comparar seu funciomamento a tabela Hash, assim a representação do dado é feita usando *<Chave,Valor>*, dessa forma representando os possíveis estados do AFD.Abaixo podemos observar uma exemplo: 
 
 ```python3
 {
@@ -36,7 +36,7 @@ Olhando mais de perto para o estado *"0"*:
 
 ```
 
-A forma como a lista de transições foi criada, foi considerando a forma como a movimentação entre os estados acontece, de forma que a "busca" ou troca de estado fosse o mais eficiente possivel.Sabendo que a troca de estado é sempre considerando um "caracter" da palavra atual, usamos então os possiveis caracteres como chave para o novo estado, aproveitando assim o funcionamento e as vantagens do HashMap.
+A forma como a lista de transições foi criada, foi considerando a forma como a movimentação entre os estados acontece, de forma que a "busca" ou troca de estado fosse o mais eficiente possivel.Sabendo que a troca de estado é sempre considerando um "caracter" da palavra atual, usamos então os possiveis caracteres como chave para o novo estado, aproveitando assim o funcionamento e as vantagens da tabela Hash.
 
 ## Complexidade :mag_right: :chart_with_upwards_trend::
 
@@ -69,7 +69,7 @@ def get_destiny_vertice_with(self, u, way):
             return None
 ```
 
-Assim, como utlizamos o HashMap como base para montar nossa lista de Adjacências e sabemos que o custo de uma busca em um HashMap é constante podemos então desconsiderar seu custo. 
+Assim, como utlizamos a tabela Hash como base para montar nossa lista de Adjacências e sabemos que o custo de uma busca em uma tabela Hash é constante podemos então desconsiderar seu custo. 
 
 
 Assim, o custo para o processamento da palavra é dado pelo numero de caracteres que ela contem, ou seja : **O(n)**
